@@ -1,0 +1,70 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+    int t;
+    cin >> t;
+    vector<int> grds(t);
+    vector<int> c(t);
+    
+    
+    for(int  = 0; i < t; i++)
+    {
+    	grd[i]=0;
+    	c[i]=0;
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for(int j = 0;j < n;j++)
+        {
+           cin >> a[j];
+           if(a[j]==1)
+           c[i]++;
+           
+        }
+        for(int j = 0;j < n;j++)
+        {
+           if(a[j]==0 && a[j+1]==0)
+               {
+                   a[j+1]=1;
+                
+               } 
+			   
+        }
+        for(int j = 0;j < n;j++)
+        {
+        	if(a[j]==1)
+        	grd[i]++;
+        }
+    }
+    
+    for(int i = 0; i < t; i++)
+    {
+        cout<<grd[i]-c[i]<<endl;;
+    }
+    
+    
+    return 0;
+}
